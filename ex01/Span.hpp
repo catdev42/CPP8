@@ -10,7 +10,8 @@
 #define RESET "\033[0m"
 #endif
 
-class Span {  
+class Span
+{
 public:
     Span(unsigned int);
     Span(Span const &other);
@@ -20,6 +21,16 @@ public:
     void addNumber(int);
     int shortestSpan() const;
     int longestSpan() const;
+    
+    template <typename ItType>
+    void addRange(ItType start, ItType end)
+    {
+        unsigned int amount = end - start;
+        if (v.size() + amount > maxSize)
+            throw std::runtime_error("Error: Span is full, items can't be added");
+        v.insert(v.end(), start, end);
+    }
+
 private:
     unsigned int maxSize;
     Span();
