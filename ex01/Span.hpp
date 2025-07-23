@@ -2,7 +2,7 @@
 #define SPAN_HPP
 
 #include <iostream>
-#include <array>
+#include <vector>
 
 #ifndef COLOR
 #define COLOR
@@ -21,8 +21,9 @@ public:
     int shortestSpan() const;
     int longestSpan() const;
 private:
+    unsigned int maxSize;
     Span();
-    
+    std::vector<int> v;
 };
 
 std::ostream &operator<<(std::ostream &o, Span const &infile);

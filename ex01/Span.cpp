@@ -1,21 +1,22 @@
 #include "Span.hpp"
 #include <iostream>
-Span::Span(unsigned int n): 
+Span::Span(unsigned int n): maxSize(n)
 {
     std::cout << GREY << "Span default constructor" << RESET << std::endl;
+    
     return;
 }
 Span::Span(Span const &other)
 {
     std::cout << GREY << "Span copy constructor" << RESET << std::endl;
-    /*TODO*/;
+    ;
     return;
 }
 
 Span &Span::operator=(Span const &other)
 {
     std::cout << GREY << "Span copy assignment operator" << RESET << std::endl;
-    if (this != &rhs)
+    if (this != &other)
     {
       /*TODO*/;
     }
