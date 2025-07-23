@@ -1,5 +1,7 @@
 #include "Span.hpp"
 #include <iostream>
+#include <limits>
+#include <algorithm>
 
 Span::Span(unsigned int n) : maxSize(n)
 {
@@ -35,6 +37,7 @@ Span::~Span()
 /********************************************/
 /********************************************/
 /****** MEMBER FUNCTIONS ******/
+
 void Span::addNumber(int n)
 {
     if (v.size() < maxSize)
@@ -43,9 +46,9 @@ void Span::addNumber(int n)
         throw std::runtime_error("Error: Span is full, item can't be added");
 }
 
-int Span::shortestSpan() const
+unsigned int Span::shortestSpan() const
 {
-    unsigned int span UINT_MAX;
+    unsigned int span = __UINT32_MAX__;
     std::vector<int> sorted = v;
 
     if (v.size() < 2)
@@ -65,7 +68,7 @@ int Span::shortestSpan() const
     }
     return span;
 }
-int Span::longestSpan() const
+unsigned int Span::longestSpan() const
 {
     unsigned int span = 0;
     int min_val;

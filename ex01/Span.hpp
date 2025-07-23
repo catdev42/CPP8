@@ -19,8 +19,8 @@ public:
     ~Span();
 
     void addNumber(int);
-    int shortestSpan() const;
-    int longestSpan() const;
+    unsigned int shortestSpan() const;
+    unsigned int longestSpan() const;
     
     template <typename ItType>
     void addRange(ItType start, ItType end)
