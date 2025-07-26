@@ -12,12 +12,14 @@ ex:
 `typename T::iterator it = std::find(x.begin(), c.end(), thingToFind);`  
 `std::vector<int>::iterator it = std::find(x.begin(), x.end(), thingToFind);`
 
-#EX01
+# EX01
 
 ### Should this Span class use an std::array inside? since arrays are containers that are a specific size? 
 Array must be initialized at compile time, so it cannot be used. We will use a Vector container for this exercise
 
-### LEARNINGS
+### NEW CONCEPTS
 
 * when working to compare 2 elements, can define 2 iterators, it and next_it for example in order to make the function work with MULTIPLE types of containers
 * 
+
+# EX02

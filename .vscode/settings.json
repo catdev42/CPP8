@@ -59,6 +59,12 @@
 		"iterator": "cpp",
 		"memory_resource": "cpp",
 		"utility": "cpp",
-		"complex": "cpp"
+		"complex": "cpp",
+		"__hash_table": "cpp",
+		"deque": "cpp",
+		"list": "cpp",
+		"span": "cpp",
+		"text_encoding": "cpp",
+		"stack": "cpp"
 	}
 }

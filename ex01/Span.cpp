@@ -61,8 +61,8 @@ unsigned int Span::shortestSpan() const
 
     while (next_it != sorted.end())
     {
-        if (static_cast<unsigned int>(*next_it - *it) < span)
-            span = static_cast<unsigned int>(*next_it) - static_cast<unsigned int>(*it);
+        if ((static_cast<long>(*next_it) - *it) < span)
+            span = static_cast<long>(*next_it) - (*it);
         ++it;
         ++next_it;
     }
@@ -78,8 +78,7 @@ unsigned int Span::longestSpan() const
         throw std::runtime_error("There are less than 2 numbers to compare");
     min_val = *std::min_element(v.begin(), v.end());
     max_val = *std::max_element(v.begin(), v.end());
-    span = max_val - min_val;
-
+    span = static_cast<long>(max_val) - min_val;
     return span;
 }
 
